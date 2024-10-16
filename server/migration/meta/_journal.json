@@ -15,6 +15,34 @@
       "when": 1728899738763,
       "tag": "0001_stiff_bastion",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1728985284798,
+      "tag": "0002_jittery_joystick",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1729049438064,
+      "tag": "0003_curious_network",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1729053027165,
+      "tag": "0004_modern_morg",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1729056508523,
+      "tag": "0005_parched_the_hood",
+      "breakpoints": true
     }
   ]
 }

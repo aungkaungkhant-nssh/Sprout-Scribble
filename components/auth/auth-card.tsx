@@ -4,15 +4,15 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card
 import Socials from './socials'
 import BackButton from './back-button'
 
-const AuthCard= (
-        { 
-            cardTitle,
-            children,
-            backButtonHref,
-            backButtonLabel,
-            showSocial
-        }:CardWrapperProps
-    ) => {
+const AuthCard = (
+    {
+        cardTitle,
+        children,
+        backButtonHref,
+        backButtonLabel,
+        showSocial = false
+    }: CardWrapperProps
+) => {
     return (
         <Card>
             <CardHeader>

@@ -3,8 +3,8 @@ export type CardWrapperProps = {
     cardTitle: string,
     backButtonHref: string,
     backButtonLabel: string,
-    showSocial: boolean
-} 
+    showSocial?: boolean
+}
 
 export type BackButtonType = {
     href: string,

@@ -9,10 +9,10 @@ const BackButton = (
     {
         href,
         label
-    }:BackButtonType
-    ) => {
+    }: BackButtonType
+) => {
     return (
-        <Button className='font-medium w-full'>
+        <Button className='font-medium w-full' asChild variant={"link"}>
             <Link href={href} aria-label={label}>{label}</Link>
         </Button>
     )
