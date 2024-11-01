@@ -14,7 +14,7 @@ type InputTagsProps = InputProps & {
     onChange: Dispatch<SetStateAction<string[]>>
 }
 
-export const InputTags = forwardRef<HTMLInputElement, InputTagsProps>(({ onChange, value, ...props }, ref) => {
+export const InputTags = forwardRef<HTMLInputElement, InputTagsProps>(({ onChange, value, ...props }) => {
     const [pendingDataPoint, setPendingDataPoint] = useState("");
     const [focused, setFocused] = useState(false)
 

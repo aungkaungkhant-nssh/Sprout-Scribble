@@ -14,7 +14,7 @@ export default function PaymentForm({ totalPrice }: { totalPrice: number }) {
     const elements = useElements();
     const { cart, setCheckoutProgress, clearCart } = useCartStore();
     const [isLoading, setIsLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
+
     const router = useRouter();
     const { execute } = useAction(createOrder, {
         onSuccess: ({ data }) => {
@@ -37,7 +37,7 @@ export default function PaymentForm({ totalPrice }: { totalPrice: number }) {
         }
         const { error: submitError } = await elements.submit();
         if (submitError) {
-            setErrorMessage(submitError.message!)
+
             setIsLoading(false);
             return
         }
@@ -55,7 +55,7 @@ export default function PaymentForm({ totalPrice }: { totalPrice: number }) {
         })
 
         if (data?.data?.error) {
-            setErrorMessage(data?.data?.error)
+
             setIsLoading(false)
             router.push("/auth/login")
 
@@ -72,7 +72,7 @@ export default function PaymentForm({ totalPrice }: { totalPrice: number }) {
                 }
             })
             if (error) {
-                setErrorMessage(error.message!)
+
                 setIsLoading(false)
                 return
             } else {
