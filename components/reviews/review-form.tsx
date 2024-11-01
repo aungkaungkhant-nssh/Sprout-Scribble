@@ -32,10 +32,14 @@ export default function ReviewForm() {
     })
     const { status, execute } = useAction(addReview, {
         onSuccess({ data }) {
-            if (data?.error) return toast.error(data.error)
-            if (data?.success) return toast.success(data.success)
+            if (data?.error) {
+                toast.error(data.error);
+            } else if (data?.success) {
+                toast.success(data.success);
+            }
         }
-    })
+    });
+
     const onSubmit = async (values: z.infer<typeof reviewSchema>) => {
         execute(values)
     };
