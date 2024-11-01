@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/navigation/nav";
-import { cn } from "@/lib/utils";
-
+import { ThemeProvider } from "@/components/providers/theme-provider"
+import Toaster from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,12 +16,23 @@ export default function RootLayout({
   profile: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={cn("px-6 md:px-24")}
+
       >
-        <Nav />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="px-6 md:px-12 max-w-8xl mx-auto flex-grow">
+            <Nav />
+            <Toaster />
+            {children}
+          </div>
+
+        </ThemeProvider>
         {/* {isAdmin && profile} */}
       </body>
     </html>
